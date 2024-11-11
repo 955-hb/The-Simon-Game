@@ -28,7 +28,17 @@ function nextSequence() {
 }
 
 function playSound(name) {
-  // 5.3
   let audio = new Audio("/sounds/" + name + ".mp3");
   audio.play();
+}
+
+// 6.1
+function animatePress(currentColor) {
+  // 6.3
+  $('#' + currentColor).addClass('pressed')
+
+  // 6.4 
+  setTimeout(function(){
+    $('#' + currentColor).removeClass('pressed')
+  },100)
 }
