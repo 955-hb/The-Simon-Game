@@ -24,10 +24,10 @@ function nextSequence() {
     .fadeOut(100)
     .fadeIn(100);
 
-  playSond(randomChosenColour);
+  playSound(randomChosenColour);
 }
 
-function playSond(name) {
+function playSound(name) {
   // 5.3
   let audio = new Audio("/sounds/" + name + ".mp3");
   audio.play();
