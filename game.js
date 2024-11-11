@@ -34,7 +34,23 @@ function checkAnswer(currentLevel) {
         nextSequence();
       }, 1000);
     }
-  }
+    // 9
+  } else {
+
+      console.log("wrong");
+
+      // 9.1
+      playSound("wrong");
+
+      // 9.2
+      $("body").addClass("game-over");
+      setTimeout(function () {
+        $("body").removeClass("game-over");
+      }, 200);
+
+      // 9.3
+      $("#level-title").text("Game Over, Press Any Key to Restart");
+    }
 }
 
 function nextSequence() {
