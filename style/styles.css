@@ -1,3 +1,11 @@
+:root {
+  --green-field: #32CD32;  
+  --red-field: #FF4500;  
+  --yellow-field: #EEEE00;  
+  --blue-field: #0000FF;  
+  --red-gameOver: #8B0000;
+}
+
 body {
   text-align: center;
   background-color: #011F3F;
@@ -27,24 +35,24 @@ body {
 }
 
 .game-over {
-  background-color: red;
+  background-color: var(--red-gameOver);
   opacity: 0.8;
 }
 
 .red {
-  background-color: red;
+  background-color: var(--red-field);
 }
 
 .green {
-  background-color: green;
+  background-color: var(--green-field);
 }
 
 .blue {
-  background-color: blue;
+  background-color: var(--blue-field);
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: var(--yellow-field);
 }
 
 .pressed {
