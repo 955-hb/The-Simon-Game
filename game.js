@@ -34,23 +34,21 @@ function checkAnswer(currentLevel) {
         nextSequence();
       }, 1000);
     }
-    // 9
   } else {
+    console.log("wrong");
 
-      console.log("wrong");
+    playSound("wrong");
 
-      // 9.1
-      playSound("wrong");
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
 
-      // 9.2
-      $("body").addClass("game-over");
-      setTimeout(function () {
-        $("body").removeClass("game-over");
-      }, 200);
+    $("#level-title").text("Game Over, Press Any Key to Restart");
 
-      // 9.3
-      $("#level-title").text("Game Over, Press Any Key to Restart");
-    }
+    // 10.2
+    startOver();
+  }
 }
 
 function nextSequence() {
@@ -81,4 +79,11 @@ function animatePress(currentColor) {
   setTimeout(function () {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
+}
+
+// 10.1
+function startOver () {
+  level = 0;
+  gamePattern = [];
+  started = false;
 }
