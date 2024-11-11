@@ -32,13 +32,10 @@ function playSound(name) {
   audio.play();
 }
 
-// 6.1
 function animatePress(currentColor) {
-  // 6.3
-  $('#' + currentColor).addClass('pressed')
+  $("#" + currentColor).addClass("pressed");
 
-  // 6.4 
-  setTimeout(function(){
-    $('#' + currentColor).removeClass('pressed')
-  },100)
+  setTimeout(function () {
+    $("#" + currentColor).removeClass("pressed");
+  }, 100);
 }
